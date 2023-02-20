@@ -1,0 +1,54 @@
+---
+title: "Structural Equation Modelling With Lavaan in R"
+author: "Adejumo Ridwan Suleiman"
+format: revealjs
+editor: visual
+---
+
+## About the Presenter
+
+# Introduction to SEM
+
+## Overview of SEM
+
+## Benefits of SEM
+
+## Introduction to lavaan
+
+# SEM Key Concepts
+
+## Path diagrams and notation
+
+## Latent and Observed variables
+
+## Endogenous and Exogenous variables
+
+## Direct and Indirect Effects
+
+# Lavaan Overview
+
+## Installing and loading the package
+
+## Creating a model object
+
+## Fitting the model
+
+## Extracting results from the model
+
+# Model Evaluation
+
+## Fitting Indices and Goodness-of-fit tests
+
+## Residual analysis and modification indices
+
+## Parameter estimation and standard errors
+
+## Model comparison and selection
+
+# Summary 
+
+## Key takeaways 
+
+## Resources 
+
+## Q&A session
