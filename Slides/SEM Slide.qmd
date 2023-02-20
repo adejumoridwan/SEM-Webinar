@@ -1,8 +1,13 @@
 ---
 title: "Structural Equation Modelling With Lavaan in R"
 author: "Adejumo Ridwan Suleiman"
-format: revealjs
 editor: visual
+format: 
+  revealjs:
+    preview-links: true
+    chalkboard: 
+      boardmarker-width: 5
+from: markdown+emoji
 ---
 
 ## About the Presenter
@@ -11,7 +16,29 @@ editor: visual
 
 ## Overview of SEM
 
+- Describe relationship between latent and observed variables by testing complex theoretical models
+- Extension of multiple regression analysis and factor analysis
+- Used in social science to test models where theoreticla constructs such as attitudes, beliefs and values are measure directly through multiple items.
+- Used in pschchology, where latent variables such as personality traits or intelligence are meausred through questionnaires.
+
 ## Benefits of SEM
+
+- Used to model complex relationships with inter related variables
+- Provides estimates for direct and indirect effects.
+- Ability to handle missing data and provide model parameter estimates in the presence of missing data.
+
+## Limitations of SEM
+
+- Large sample size to obtain reliable estimates of model parameters
+- Requires a well specified theoretical model
+- Difficult to learn and familiarity with statistical software and advanced statistical concepts.
+
+## Applications of SEM
+- Psychology
+- Social Sciences
+- Education
+- Business
+
 
 ## Introduction to lavaan
 
@@ -45,10 +72,12 @@ editor: visual
 
 ## Model comparison and selection
 
-# Summary 
+# Case Study
 
-## Key takeaways 
+# Summary
 
-## Resources 
+## Key takeaways
+
+## Resources
 
 ## Q&A session

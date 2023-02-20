@@ -33,6 +33,8 @@
   <link href="SEM Slide_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="SEM Slide_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="SEM Slide_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="SEM Slide_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="SEM Slide_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="SEM Slide_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
@@ -337,27 +339,97 @@ Adejumo Ridwan Suleiman
 </section>
 <section id="about-the-presenter" class="slide level2">
 <h2>About the Presenter</h2>
+<div class="column" style="width:30%;">
+<p><img data-src="d.jpg" class="absolute" style="top: 70px; left: 530px; width: 499px; height: 574px; "></p>
+</div>
 </section>
 <section>
 <section id="introduction-to-sem" class="title-slide slide level1 center">
 <h1>Introduction to SEM</h1>
 
 </section>
-<section id="overview-of-structural-equation-modellingsem" class="slide level2">
-<h2>Overview of Structural Equation Modelling(SEM)</h2>
+<section id="overview-of-sem" class="slide level2">
+<h2>Overview of SEM</h2>
 </section>
-<section id="benefits-of-sem-over-other-techniques" class="slide level2">
-<h2>Benefits of SEM over other techniques</h2>
+<section id="benefits-of-sem" class="slide level2">
+<h2>Benefits of SEM</h2>
 </section>
-<section id="brief-explanation-of-lavaan-package-in-r" class="slide level2">
-<h2>Brief Explanation of lavaan package in R</h2>
+<section id="introduction-to-lavaan" class="slide level2">
+<h2>Introduction to lavaan</h2>
 </section></section>
-<section id="section" class="title-slide slide level1 center">
-<h1></h1>
+<section>
+<section id="sem-key-concepts" class="title-slide slide level1 center">
+<h1>SEM Key Concepts</h1>
+
+</section>
+<section id="path-diagrams-and-notation" class="slide level2">
+<h2>Path diagrams and notation</h2>
+</section>
+<section id="latent-and-observed-variables" class="slide level2">
+<h2>Latent and Observed variables</h2>
+</section>
+<section id="endogenous-and-exogenous-variables" class="slide level2">
+<h2>Endogenous and Exogenous variables</h2>
+</section>
+<section id="direct-and-indirect-effects" class="slide level2">
+<h2>Direct and Indirect Effects</h2>
+</section></section>
+<section>
+<section id="lavaan-overview" class="title-slide slide level1 center">
+<h1>Lavaan Overview</h1>
+
+</section>
+<section id="installing-and-loading-the-package" class="slide level2">
+<h2>Installing and loading the package</h2>
+</section>
+<section id="creating-a-model-object" class="slide level2">
+<h2>Creating a model object</h2>
+</section>
+<section id="fitting-the-model" class="slide level2">
+<h2>Fitting the model</h2>
+</section>
+<section id="extracting-results-from-the-model" class="slide level2">
+<h2>Extracting results from the model</h2>
+</section></section>
+<section>
+<section id="model-evaluation" class="title-slide slide level1 center">
+<h1>Model Evaluation</h1>
+
+</section>
+<section id="fitting-indices-and-goodness-of-fit-tests" class="slide level2">
+<h2>Fitting Indices and Goodness-of-fit tests</h2>
+</section>
+<section id="residual-analysis-and-modification-indices" class="slide level2">
+<h2>Residual analysis and modification indices</h2>
+</section>
+<section id="parameter-estimation-and-standard-errors" class="slide level2">
+<h2>Parameter estimation and standard errors</h2>
+</section>
+<section id="model-comparison-and-selection" class="slide level2">
+<h2>Model comparison and selection</h2>
+</section></section>
+<section id="case-study" class="title-slide slide level1 center">
+<h1>Case Study</h1>
+
+</section>
+
+<section>
+<section id="summary" class="title-slide slide level1 center">
+<h1>Summary</h1>
+
+</section>
+<section id="key-takeaways" class="slide level2">
+<h2>Key takeaways</h2>
+</section>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
+</section>
+<section id="qa-session" class="slide level2">
+<h2>Q&amp;A session</h2>
 <div class="footer footer-default">
 
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -368,6 +440,7 @@ Adejumo Ridwan Suleiman
   <script src="SEM Slide_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="SEM Slide_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="SEM Slide_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="SEM Slide_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="SEM Slide_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -389,7 +462,8 @@ Adejumo Ridwan Suleiman
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true,"boardmarkerWidth":5},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -512,7 +586,7 @@ Adejumo Ridwan Suleiman
         hideCursorTime: 5000,
 
         // Opens links in an iframe preview overlay
-        previewLinks: false,
+        previewLinks: true,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
         transition: 'none',
@@ -560,7 +634,7 @@ Adejumo Ridwan Suleiman
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
 
           RevealMath,
           RevealNotes,
