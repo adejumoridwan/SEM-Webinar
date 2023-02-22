@@ -6,7 +6,7 @@
 <script src="SEM Slide_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="SEM Slide_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="SEM Slide_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="SEM Slide_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="SEM Slide_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.280">
 
   <meta name="author" content="Adejumo Ridwan Suleiman">
@@ -321,7 +321,7 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
@@ -339,9 +339,23 @@ Adejumo Ridwan Suleiman
 </section>
 <section id="about-the-presenter" class="slide level2">
 <h2>About the Presenter</h2>
-<div class="column" style="width:30%;">
-<p><img data-src="d.jpg" class="absolute" style="top: 70px; left: 530px; width: 499px; height: 574px; "></p>
-</div>
+<ul>
+<li class="fragment">Data Scientist and Statistician</li>
+<li class="fragment">Udemy Instructor</li>
+</ul>
+<p><img data-src="images/ridwan.jpeg" class="absolute" style="top: 70px; left: 700px; width: 499px; height: 574px; "></p>
+</section>
+<section id="contents-of-todays-presentation" class="slide level2">
+<h2>Contents of Today’s Presentation</h2>
+<ul>
+<li class="fragment">Introduction to SEM</li>
+<li class="fragment">Key Concepts in SEM</li>
+<li class="fragment">Overview of the lavaan Package</li>
+<li class="fragment">Model Evaluation</li>
+<li class="fragment">Case Study</li>
+<li class="fragment">Summary</li>
+<li class="fragment">Q/A</li>
+</ul>
 </section>
 <section>
 <section id="introduction-to-sem" class="title-slide slide level1 center">
@@ -350,12 +364,41 @@ Adejumo Ridwan Suleiman
 </section>
 <section id="overview-of-sem" class="slide level2">
 <h2>Overview of SEM</h2>
+<ul>
+<li class="fragment">Describes relationship between latent and observed variables by testing complex theoretical models.</li>
+<li class="fragment">Extension of multiple regression analysis and factor analysis.</li>
+<li class="fragment">Used in social science to test models where theoretical constructs such as attitudes, beliefs and values are measured directly through multiple items.</li>
+<li class="fragment">Used in psychology, where latent variables such as personality traits or intelligence are measured through questionnaires.</li>
+</ul>
 </section>
 <section id="benefits-of-sem" class="slide level2">
 <h2>Benefits of SEM</h2>
+<ul>
+<li class="fragment">Used to model complex relationships with inter related variables.</li>
+<li class="fragment">Provides estimates for direct and indirect effects.</li>
+<li class="fragment">Ability to handle missing data and provide model parameter estimates in the presence of missing data.</li>
+</ul>
+</section>
+<section id="limitations-of-sem" class="slide level2">
+<h2>Limitations of SEM</h2>
+<ul>
+<li class="fragment">Large sample size to obtain reliable estimates of model parameters</li>
+<li class="fragment">Requires a well specified theoretical model</li>
+<li class="fragment">Difficult to learn, with familiarity of statistical software and advanced statistical concepts needed.</li>
+</ul>
+</section>
+<section id="applications-of-sem" class="slide level2">
+<h2>Applications of SEM</h2>
+<ul>
+<li class="fragment">Psychology</li>
+<li class="fragment">Social Sciences</li>
+<li class="fragment">Education</li>
+<li class="fragment">Business</li>
+</ul>
 </section>
 <section id="introduction-to-lavaan" class="slide level2">
 <h2>Introduction to lavaan</h2>
+<p>R package for Structural Equation Modelling (SEM) analysis.</p>
 </section></section>
 <section>
 <section id="sem-key-concepts" class="title-slide slide level1 center">
@@ -364,16 +407,52 @@ Adejumo Ridwan Suleiman
 </section>
 <section id="path-diagrams-and-notation" class="slide level2">
 <h2>Path diagrams and notation</h2>
+<ul>
+<li class="fragment">Graphical representations of the relationships between variables in a SEM model</li>
+<li class="fragment">Observed variables are represented by squares or rectangles</li>
+<li class="fragment">Latent variables are represented by circles or ovals.</li>
+<li class="fragment">Arrows between variables represents hypothesized relationships between them either direct or bidirectional.</li>
+</ul>
 </section>
+<section id="path-diagrams-and-notation-1" class="slide level2">
+<h2>Path diagrams and notation</h2>
+
+<img data-src="images/PathDiagram.png" class="r-stretch"></section>
 <section id="latent-and-observed-variables" class="slide level2">
 <h2>Latent and Observed variables</h2>
+<ul>
+<li class="fragment">Observed variables are measured directly</li>
+<li class="fragment">Latent variables are not directly measured and are inferred from observed variables.</li>
+<li class="fragment">Latent variables are also known as observed or latent constructs.</li>
+</ul>
 </section>
+<section id="latent-and-observed-variables-1" class="slide level2">
+<h2>Latent and Observed variables</h2>
+
+<img data-src="images/PathDiagram.png" class="r-stretch"></section>
 <section id="endogenous-and-exogenous-variables" class="slide level2">
 <h2>Endogenous and Exogenous variables</h2>
+<ul>
+<li class="fragment">Endogenous variables are variables that are hypothesized to be caused by other variables in the model.</li>
+<li class="fragment">Exogenous variables are not influenced by other variables in the model.</li>
+<li class="fragment">In a path diagram, endogenous variables have arrows pointing to them while exogenous don’t.</li>
+</ul>
 </section>
+<section id="endogenous-and-exogenous-variables-1" class="slide level2">
+<h2>Endogenous and Exogenous variables</h2>
+
+<img data-src="images/PathDiagram1.png" class="r-stretch"></section>
 <section id="direct-and-indirect-effects" class="slide level2">
 <h2>Direct and Indirect Effects</h2>
-</section></section>
+<ul>
+<li class="fragment">A direct effect is the direct relationship between two variables.</li>
+<li class="fragment">An indirect effect is a relationship that is mediated by one or more other variables in the model.</li>
+</ul>
+</section>
+<section id="direct-and-indirect-effects-1" class="slide level2">
+<h2>Direct and Indirect Effects</h2>
+
+<img data-src="images/PathDiagram2.png" class="r-stretch"></section></section>
 <section>
 <section id="lavaan-overview" class="title-slide slide level1 center">
 <h1>Lavaan Overview</h1>

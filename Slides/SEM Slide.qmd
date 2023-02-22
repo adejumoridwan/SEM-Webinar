@@ -4,6 +4,8 @@ author: "Adejumo Ridwan Suleiman"
 editor: visual
 format: 
   revealjs:
+    theme: league
+    incremental: true
     preview-links: true
     chalkboard: 
       boardmarker-width: 5
@@ -12,18 +14,33 @@ from: markdown+emoji
 
 ## About the Presenter
 
+- Data Scientist and Statistician
+- Udemy Instructor
+
+![](images/ridwan.jpeg){.absolute top="70" left="700" height="574" width="499"}
+
+## Contents of Today's Presentation
+
+- Introduction to SEM
+- Key Concepts in SEM
+- Overview of the lavaan Package
+- Model Evaluation 
+- Case Study
+- Summary
+- Q/A
+
 # Introduction to SEM
 
 ## Overview of SEM
 
-- Describe relationship between latent and observed variables by testing complex theoretical models
-- Extension of multiple regression analysis and factor analysis
-- Used in social science to test models where theoreticla constructs such as attitudes, beliefs and values are measure directly through multiple items.
-- Used in pschchology, where latent variables such as personality traits or intelligence are meausred through questionnaires.
+- Describes relationship between latent and observed variables by testing complex theoretical models.
+- Extension of multiple regression analysis and factor analysis.
+- Used in social science to test models where theoretical constructs such as attitudes, beliefs and values are measured directly through multiple items.
+- Used in psychology, where latent variables such as personality traits or intelligence are measured through questionnaires.
 
 ## Benefits of SEM
 
-- Used to model complex relationships with inter related variables
+- Used to model complex relationships with inter related variables.
 - Provides estimates for direct and indirect effects.
 - Ability to handle missing data and provide model parameter estimates in the presence of missing data.
 
@@ -31,9 +48,10 @@ from: markdown+emoji
 
 - Large sample size to obtain reliable estimates of model parameters
 - Requires a well specified theoretical model
-- Difficult to learn and familiarity with statistical software and advanced statistical concepts.
+- Difficult to learn, with familiarity of statistical software and advanced statistical concepts needed.
 
 ## Applications of SEM
+
 - Psychology
 - Social Sciences
 - Education
@@ -42,15 +60,44 @@ from: markdown+emoji
 
 ## Introduction to lavaan
 
+R package for Structural Equation Modelling (SEM) analysis. 
+
+
 # SEM Key Concepts
 
 ## Path diagrams and notation
 
+- Graphical representations of the relationships between variables in a SEM model
+- Observed variables are represented by squares or rectangles
+- Latent variables are represented by circles or ovals.
+- Arrows between variables represents hypothesized relationships between them either direct or bidirectional.
+
+## Path diagrams and notation
+![](images/PathDiagram.png)
+
 ## Latent and Observed variables
 
+- Observed variables are measured directly
+- Latent variables are not directly measured and are inferred from observed variables.
+- Latent variables are also known as observed or latent constructs.
+
+## Latent and Observed variables
+![](images/PathDiagram.png)
+
 ## Endogenous and Exogenous variables
+- Endogenous variables are variables  that are hypothesized to be caused by other variables in the model.
+- Exogenous variables are not influenced by other variables in the model.
+- In a path diagram, endogenous variables have arrows pointing to them while exogenous don't.
+
+## Endogenous and Exogenous variables
+![](images/PathDiagram1.png)
 
 ## Direct and Indirect Effects
+- A direct effect is the direct relationship between two variables.
+- An indirect effect is a relationship that is mediated by one or more other variables in the model.
+
+## Direct and Indirect Effects
+![](images/PathDiagram2.png)
 
 # Lavaan Overview
 
