@@ -1,15 +1,24 @@
 ---
 title: "Structural Equation Modelling With Lavaan in R"
 author: "Adejumo Ridwan Suleiman"
-editor: visual
 format: 
   revealjs:
-    theme: league
+    logo: images/bdl_full_logo.jpeg
+    transition: slide
+    scrollable: true
     incremental: true
+    theme: [serif, custom-style.scss]
     preview-links: true
     chalkboard: 
       boardmarker-width: 5
 from: markdown+emoji
+execute:
+  echo: true
+editor: visual
+title-slide-attributes: 
+  data-background-image: images/bdl_full_logo.jpeg
+  data-background-size: 10%
+  data-background-position: 2% 2%
 ---
 
 ## About the Presenter
@@ -33,7 +42,7 @@ from: markdown+emoji
 
 ## Overview of SEM
 
-- Describes relationship between latent and observed variables by testing complex theoretical models.
+- Multivariate statistical analysis describing relationship between latent and observed variables.
 - Extension of multiple regression analysis and factor analysis.
 - Used in social science to test models where theoretical constructs such as attitudes, beliefs and values are measured directly through multiple items.
 - Used in psychology, where latent variables such as personality traits or intelligence are measured through questionnaires.
@@ -60,7 +69,8 @@ from: markdown+emoji
 
 ## Introduction to lavaan
 
-R package for Structural Equation Modelling (SEM) analysis. 
+- R package for Structural Equation Modelling (SEM) analysis. 
+- Lavaan stands for Latent Variable Analysis
 
 
 # SEM Key Concepts
@@ -103,28 +113,108 @@ R package for Structural Equation Modelling (SEM) analysis.
 
 ## Installing and loading the package
 
+To install the package
+```{r, eval = FALSE}
+install.packages("lavaan")
+```
+To load the package
+```{r}
+library(lavaan)
+```
+
+
+
 ## Creating a model object
+
+- Model object specifies relationship between observed and latent variables
+```{r}
+model <- 'y =~ x1 + x2'
+```
+- `~=` specify observed variables to latent variable relationship
+- `~` specifies regression between outcome and predictor variables.
+- `~~` specifies covariance between variables.
 
 ## Fitting the model
 
+```{r, eval=FALSE}
+fit <- sem(model, data = mydata)
+```
+
+
 ## Extracting results from the model
+```{r, eval=FALSE}
+summary(fit, standardized = TRUE)
+```
 
-# Model Evaluation
 
-## Fitting Indices and Goodness-of-fit tests
+# Model Interpretation
 
-## Residual analysis and modification indices
+## Interpreting parameter estimates and standard errors
 
-## Parameter estimation and standard errors
+- Parameter estimates are values of the coefficients calculated for each predictor variable in the model
+- Standard errors are measure of uncertainty in the estimation of these coefficients.
 
-## Model comparison and selection
+## Interpreting fit indices and goodness-of-fit tests
+
+- Fit indices and goodness-of-fit Measures the goodness-of-fit of the model
+- Fit indices includes
+  - Chi-square
+  - Root Mean Square Error of Approximation(RMSEA)
+  - Comparative Fit Index(CFI)
+  - Tucker-Lewis Index(TLI)
+  - Standardized Root Mean Square Residual(SRMR)
+- Good model fit is indicated by a low chi-square, low RMSEA and high CFI.
+
+
+## Interpreting residuals and modification indices
+
+- Residuals are differences between the observed and predicted values.
+- Modification indices are changes made to the model to improve interpreting residuals.
+- High residuals indicate that the model is missing important indicator predictor variables or the model is not appropriate for the data.
 
 # Case Study
+
+## Political Democracy Dataset
+The dataset contains various measures of political democracy and industrialization in developing countries.
+
+## Variables
+
+- Political Democracy in 1960
+  * y1 - Expert ratings of the freedom of the press in 1960
+  * y2 - The freedom of political opposition in 1960
+  * y3 - The fairness of elections in 1960
+  * y4 - The effectiveness of the elected legistlature in 1960
+  
+- Political Democracy in 1965
+  * y5 - Expert ratings of the freedom of the press in 1965
+  * y6 - The freedom of political opposition in 1965
+  * y7 - The fairness of elections in 1965
+  * y8 - The effectiveness of the elected legistlature in 1965
+  
+- Level of Industrialization in 1960
+ * x1 - The gross national product (GNP) per capita in 1960
+ * x2 - The inanimate energy consumption per captita in 1960
+ * x3 - The percentage of the labour force in industry in 1960
+ 
+## Hypothesized Relationship
+
+![](images/politicalDemocracy.png)
+
+
 
 # Summary
 
 ## Key takeaways
+- Structural equation modeling (SEM) is a statistical technique used to analyze the relationships between observed and latent (unobserved) variables.
+- Lavaan is an R package for SEM that allows users to specify their models using syntax that is similar to standard regression equations.
+- When using lavaan, it's important to specify the model correctly, including specifying the relationships between the variables and the measurement model for the latent variables.
+- Lavaan allows users to test the fit of their model using several fit indices, such as chi-square, RMSEA, CFI, and TLI. 
+- When interpreting the results of a lavaan analysis, it's important to consider both the statistical significance of the estimates and their practical significance.
+- Finally, SEM is a powerful tool that can help researchers better understand the complex relationships between variables, but it's important to use it appropriately and with caution.
 
 ## Resources
+- [Chapter 6 Structural Equation Modeling, *Introduction to R for Data Science*](https://bookdown.org/jdholster1/idsr/structural-equation-modeling.html)
+- [Chapter 6 Structural Equation Modeling, *Using R For Social Work Research*](https://bookdown.org/jdholster1/idsr/structural-equation-modeling.html)
+- [The Lavaan Project](https://lavaan.ugent.be/tutorial/sem.html)
 
 ## Q&A session
